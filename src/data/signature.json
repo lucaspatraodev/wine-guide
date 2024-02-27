@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Explore Our Collections",
+    "description": "Begin your wine journey by exploring our curated collections. Browse through our diverse offerings and choose a subscription package that resonates with your unique palate.",
+    "photoSrc": "winecard_1.jpg",
+    "photoAlt": "A lot of wine bottles in cellar",
+    "id": 1
+  },
+  {
+    "title": "Select Your Subscription",
+    "description": "Tailor your wine experience by selecting a subscription plan that suits your preferences. Choose the duration and type of wines that align with your taste, and get ready for a personalized journey.",
+    "photoSrc": "winecard_2.jpg",
+    "photoAlt": "A man delivering a box of wine",
+    "id": 2
+  },
+  {
+    "title": "Enjoy your signature!",
+    "description": "The anticipation culminates in the joy of unboxing your carefully curated wines. Delight in the surprise of discovering new labels and flavors. Each month, savor the moment as you uncork a world of possibilities.",
+    "photoSrc": "winecard_3.jpg",
+    "photoAlt": "A woman holding a glass of wine",
+    "id": 3
+  }
+]
