@@ -4,7 +4,7 @@ import aboutImage from "/aboutUs/aboutUs.svg";
 
 export default function AboutSection() {
   return (
-    <section class="flex flex-col gap-4 pt-8 w-screen h-auto justify-center md:rounded-tl-3xl md:rounded-tr-3xl bg-[#14213D]">
+    <section className="flex flex-col gap-4 pt-8 w-screen h-auto justify-center md:rounded-tl-3xl md:rounded-tr-3xl bg-[#14213D]">
       <div className="text-center">
         <h1 className="text-[#FCA311] font-semibold text-4xl leading-10">
           About Us
@@ -18,7 +18,7 @@ export default function AboutSection() {
           <img src={aboutImage} alt="People drinking wine at house" />
         </div>
 
-        <div className="flex flex-col items-center p-4 md:grid md:grid-cols-2 md:grid-rows-2 md:w-1/2 place-self-center">
+        <div className="flex flex-col items-center p-4 gap-8 md:grid md:grid-cols-2 md:grid-rows-2 md:w-1/2 place-self-center">
           {AboutUsCardsInfo.map((info) => {
             return (
               <AboutInfoCard

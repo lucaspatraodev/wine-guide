@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function MoreAboutSection() {
+function MoreAboutSection({ text }, ref) {
   const form = useRef();
   const [emailInputValue, SetEmailInputValue] = useState("");
 
@@ -29,7 +29,10 @@ export default function MoreAboutSection() {
   };
 
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 w-screen h-auto p-12 bg-white">
+    <section
+      ref={ref}
+      className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 w-screen h-auto p-12 bg-white"
+    >
       <div className="flex flex-col gap-4 p-4 text-center md:text-left">
         <h1 className="text-3xl">Do you wanna know more about WineGuide?</h1>
         <p className="text-sm">
@@ -70,3 +73,5 @@ export default function MoreAboutSection() {
     </section>
   );
 }
+
+export default forwardRef(MoreAboutSection);

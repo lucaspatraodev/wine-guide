@@ -1,9 +1,9 @@
 import backgroundImage from "/Banner/backgroundMain.png";
 import wineGlassImage from "/Banner/wineglass2.png";
 
-export default function MainContent() {
+export default function MainContent({ onButtonClick }) {
   return (
-    <main className="min-[800px]:pt-12">
+    <main className="min-[800px]:pt-8">
       {/* <div className="w-full text-center bg-[#F2F2F2] p-4 min-[600px]:hidden">
         <p className="text-sm text-[#14213D] font-semibold max-[600px]:text-[14px] max-[400px]:text-[12px] md:text-base lg:text-xl">
           Essential wine delivered to your doorstep.
@@ -11,7 +11,7 @@ export default function MainContent() {
         </p>
       </div> */}
       <div
-        className="w-screen min-h-screen max-h-screen flex justify-center items-center p-8 min-[600px]:p-32"
+        className="w-screen min-h-screen max-h-screen flex justify-center items-center p-8 min-[600px]:p-24"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -27,7 +27,10 @@ export default function MainContent() {
               Explore our curated selection of exceptional wines sourced from
               around the world.
             </p>
-            <button className="shadow-md bg-[#F2C94C] text-[#14213D] max-[600px]:w-[140px] md:w-[150px] text-[16px] max-[600px]:text-[16px] font-bold mt-2 p-4 rounded-[30px]">
+            <button
+              onClick={onButtonClick}
+              className="shadow-md bg-[#F2C94C] text-[#14213D] max-[600px]:w-[140px] md:w-[150px] text-[16px] max-[600px]:text-[16px] font-bold mt-2 p-4 rounded-[30px]"
+            >
               More about
             </button>
           </div>
@@ -35,7 +38,7 @@ export default function MainContent() {
           <div>
             <img
               src={wineGlassImage}
-              className="max-[600px]:h-[400px] max-[600px]:min-w-[250px] min-[600px]:h-[600px] min-[600px]:w-[330px] min-[1300px]:h-[700px] min-[1300px]:w-[400px]"
+              className="max-[600px]:h-[400px] max-[600px]:min-w-[250px] min-[600px]:h-[530px] min-[600px]:w-[330px] min-[1300px]:h-[700px] min-[1300px]:w-[400px]"
             />
           </div>
         </div>

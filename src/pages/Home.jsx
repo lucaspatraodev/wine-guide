@@ -5,16 +5,27 @@ import MoreAboutSection from "../components/MoreAboutSection";
 import SignatureSection from "../components/SignatureSection";
 import Footer from "../components/Footer";
 import WineTypesSection from "../components/WineTypesSection";
+import { useRef } from "react";
 
 function Home() {
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+  };
+
   return (
     <div className="w-screen">
       <Header />
-      <MainContent />
+      <MainContent onButtonClick={handleClick} />
       <SignatureSection />
       <AboutSection />
       <WineTypesSection />
-      <MoreAboutSection />
+      <MoreAboutSection ref={ref} />
       <Footer />
     </div>
   );
