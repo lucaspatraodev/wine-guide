@@ -3,13 +3,7 @@ import wineGlassImage from "/Banner/wineglass2.png";
 
 export default function MainContent({ onButtonClick }) {
   return (
-    <main className="min-[800px]:pt-8">
-      {/* <div className="w-full text-center bg-[#F2F2F2] p-4 min-[600px]:hidden">
-        <p className="text-sm text-[#14213D] font-semibold max-[600px]:text-[14px] max-[400px]:text-[12px] md:text-base lg:text-xl">
-          Essential wine delivered to your doorstep.
-          <span className="text-[#FCA311] font-bold"> Every month.</span>
-        </p>
-      </div> */}
+    <main className="pt-8">
       <div
         className="w-screen min-h-screen max-h-screen flex justify-center items-center p-8 min-[600px]:p-24"
         style={{

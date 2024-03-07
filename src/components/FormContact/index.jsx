@@ -1,17 +1,39 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import TextField from "../FormContactTextField";
 
 export default function FormContact() {
+  const form = useRef();
   const [name, setName] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
+  const [emailInputValue, SetEmailInputValue] = useState("");
 
+  const sendEmail = (e) => {
+    console.log(emailInputValue);
     console.log("Name:", name);
     console.log("E-mail:", emailAddress);
     console.log("Message:", message);
+    e.preventDefault();
+
+    const serviceID = import.meta.env.VITE_REACT_APP_YOUR_SERVICE_ID;
+    const templateID = import.meta.env.VITE_REACT_APP_YOUR_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_REACT_APP_YOUR_PUBLIC_KEY;
+
+    emailjs
+      .sendForm(serviceID, templateID, form.current, {
+        user_email: emailInputValue,
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          console.log("E-mail sent!");
+        },
+        (error) => {
+          console.log("Error in sending e-mail:", error);
+        }
+      );
   };
 
   return (
@@ -21,7 +43,7 @@ export default function FormContact() {
         here are countless food websites catering to various cuisines, dietary
         preferences, and purposes.
       </p>
-      <form onSubmit={handleSubmit} className="py-6" autoComplete="off">
+      <form ref={form} onSubmit={sendEmail} className="py-6" autoComplete="off">
         <div className="flex flex-col justify-center items-center gap-2">
           <TextField
             label="Name"
@@ -32,8 +54,9 @@ export default function FormContact() {
           <TextField
             label="E-mail"
             placeholder="Your best e-mail address"
-            inputValue={emailAddress}
-            onValueChange={(inputValue) => setEmailAddress(inputValue)}
+            name="user_email"
+            inputValue={emailInputValue}
+            onValueChange={(inputValue) => SetEmailInputValue(inputValue)}
           />
           <TextField
             label="Message"

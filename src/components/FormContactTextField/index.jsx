@@ -3,6 +3,7 @@ export default function TextField({
   placeholder,
   inputValue,
   onValueChange,
+  name,
   autoComplete = "off",
 }) {
   function handleOnChange(ev) {
@@ -11,16 +12,17 @@ export default function TextField({
 
   return (
     <div className="w-full md:w-4/6 mx-auto">
-      <label class="text-left block mb-2 text-sm font-medium text-black">
+      <label className="text-left block mb-2 text-sm font-medium text-black">
         {label}
       </label>
       <input
+        name={name}
         type="text"
         value={inputValue}
         onChange={(ev) => {
           handleOnChange(ev);
         }}
-        class="bg-[#E2E6EE] border border-gray-400 text-sm rounded-lg focus:ring-[#FCA311] focus:border-[#FCA311] focus:outline-none block w-full p-2.5"
+        className="bg-[#E2E6EE] border border-gray-400 text-sm rounded-lg focus:ring-[#FCA311] focus:border-[#FCA311] focus:outline-none block w-full p-2.5"
         placeholder={placeholder}
         required
       />
