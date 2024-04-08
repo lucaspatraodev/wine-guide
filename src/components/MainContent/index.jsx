@@ -23,7 +23,7 @@ export default function MainContent({ onButtonClick }) {
             </p>
             <button
               onClick={onButtonClick}
-              className="shadow-md bg-[#F2C94C] text-[#14213D] max-[700px]:w-[140px] md:w-[150px] text-[16px] max-[700px]:text-[16px] font-bold mt-2 p-4 rounded-[30px]"
+              className="shadow-md bg-[#F2C94C] text-[#14213D] max-[700px]:w-[140px] md:w-[150px] text-[16px] max-[700px]:text-[16px] font-bold mt-2 p-[16px] rounded-[30px]"
             >
               More about
             </button>
