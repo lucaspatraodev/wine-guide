@@ -3,18 +3,11 @@ import profileImage from "/DeveloperInfoSection/profile.png";
 function DeveloperInfoSection() {
   return (
     <section className="p-4 my-4 md:py-24 md:px-12 flex flex-col md:flex-row gap-4 justify-center items-center">
-      <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src={profileImage}
-          alt="Profile picture of Lucas Patrão"
-          className="w-96 h-96 max-[600px]:h-64 max-[600px]:w-64 rounded-full"
-        />
-      </div>
       <div className="w-full md:w-2/6 flex flex-col gap-4">
-        <h1 className="text-[#14213D] text-4xl text-center font-bold">
+        <h1 className="text-[#14213D] text-4xl md:text-5xl text-center md:text-left font-bold">
           Hello there, i'm Lucas!
         </h1>
-        <h1 className="text-center">
+        <h1 className="text-[#14213D] text-center font-light md:text-left text-xs min-[600px]:text-[16px] leading-5">
           As a passionate Front-end Developer, I specialize in crafting engaging
           digital experiences and efficient code. With 3 years of experience in
           Information Technology, I possess strong expertise in React,
@@ -24,12 +17,12 @@ function DeveloperInfoSection() {
           and explore how I can help meet demands, drive projects, and empower
           teams.
         </h1>
-        <div className="flex mt-4 justify-center">
+        <div className="flex gap-4 mt-4 justify-center md:items-left">
           <a
             href="https://www.linkedin.com/in/lucas-patrao/"
-            className="text-[#14213D] hover:text-[#FCA311] ms-5"
+            className="text-[#14213D] hover:text-[#FCA311] "
           >
-            <span className="inline-block h-10 w-8">
+            <span className="inline-block h-8 w-6 md:h-10 md:w-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -39,9 +32,9 @@ function DeveloperInfoSection() {
               </svg>
             </span>
           </a>
-          <a href="#" className="text-[#14213D] hover:text-[#FCA311] ms-5">
+          <a href="#" className="text-[#14213D] hover:text-[#FCA311]">
             <svg
-              className="w-8 h-8"
+              className="h-8 w-6 md:h-10 md:w-8"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -52,6 +45,13 @@ function DeveloperInfoSection() {
             <span className="sr-only">GitHub account</span>
           </a>
         </div>
+      </div>
+      <div className="w-full md:w-1/2 flex justify-center">
+        <img
+          src={profileImage}
+          alt="Profile picture of Lucas Patrão"
+          className="w-96 h-96 max-[600px]:h-56 max-[600px]:w-56 rounded-full"
+        />
       </div>
     </section>
   );

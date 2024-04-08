@@ -7,7 +7,7 @@ export default function SignatureInfoCard({
 }) {
   return (
     <div
-      className="flex flex-col items-center p-6 sm:p-8 h-auto w-full max-[600px]:max-w-3/4 min-[600px]:max-w-4/12 min-[1200px]:max-w-2/12 gap-2 rounded-lg bg-[#14213D] shadow-lg"
+      className="flex flex-col items-center p-6 sm:p-8 h-[500px] w-full max-[600px]:max-w-3/4 min-[600px]:max-w-4/12 min-[1200px]:max-w-2/12 gap-2 rounded-lg bg-[#14213D] shadow-lg"
       key={key}
     >
       <img

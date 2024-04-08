@@ -3,7 +3,7 @@ import wineGlassImage from "/Banner/wineglass2.png";
 
 export default function MainContent({ onButtonClick }) {
   return (
-    <main className="pt-8">
+    <main>
       <div
         className="w-screen min-h-screen max-h-screen flex justify-center items-center p-8 min-[600px]:p-24"
         style={{
@@ -32,7 +32,7 @@ export default function MainContent({ onButtonClick }) {
           <div>
             <img
               src={wineGlassImage}
-              className="max-[600px]:h-[400px] max-[600px]:min-w-[250px] min-[600px]:h-[530px] min-[600px]:w-[330px] min-[1300px]:h-[700px] min-[1300px]:w-[400px]"
+              className="max-[600px]:h-[400px] max-[600px]:min-w-[250px] min-[600px]:h-[475px] min-[600px]:w-[330px] min-[1300px]:h-[700px] min-[1300px]:w-[400px]"
             />
           </div>
         </div>
