@@ -5,7 +5,7 @@ export default function MainContent({ onButtonClick }) {
   return (
     <main>
       <div
-        className="w-screen min-h-screen max-h-screen flex justify-center items-center pt-8 min-[600px]:p-24"
+        className="w-screen min-h-screen max-h-screen flex justify-center items-center pt-4 min-[600px]:p-24"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
