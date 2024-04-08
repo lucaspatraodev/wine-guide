@@ -14,7 +14,7 @@ export default function MainContent({ onButtonClick }) {
       >
         <div className="flex flex-col min-[800px]:flex-row gap-4 min-[1400px]:gap-32 justify-center items-center">
           <div className="flex flex-col gap-4 items-start max-[800px]:text-center max-[800px]:items-center max-[800px]:min-w-full md:w-1/2">
-            <h1 className="text-white text-4xl min-[700px]:text-5xl min-[1100px]:text-6xl text drop-shadow-lg font-bold">
+            <h1 className="text-white text-[32px] min-[700px]:text-5xl min-[1100px]:text-6xl text drop-shadow-lg font-bold">
               The finest wines delivered to your doorstep.
             </h1>
             <p className="text-white text-md drop-shadow-md min-[700px]:text-[19px]">
